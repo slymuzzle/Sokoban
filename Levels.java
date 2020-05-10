@@ -206,20 +206,20 @@ public class Levels {
 
     public int[][] loadLevel(String path) {
 
-    		String renat = OpenAndReadFile.readFile(path);
-			String egor = Analyze.parseText(renat);
+    		String levelFile = OpenAndReadFile.readFile(path);
+			String parseFile = Analyze.parseText(levelFile);
 
-			int[][] newDesktop = Array.createDesktop(egor);
+			int[][] newDesktop = Array.createDesktop(parseFile);
 
 			return newDesktop;
     }
 
         public int[][] loadNewLevel(String path) {
     		
-    		String renat = OpenAndReadFile.readFile(path);
-			String egor = Analyze.parseText(renat);
+    		String levelFile = OpenAndReadFile.readFile(path);
+			String parseFile = Analyze.parseText(levelFile);
 
-			int[][] newDesktop = Array.createDesktop(egor);
+			int[][] newDesktop = Array.createDesktop(parseFile);
 
 			level = 101;
 
